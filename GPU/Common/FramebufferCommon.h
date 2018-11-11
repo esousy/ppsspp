@@ -243,10 +243,10 @@ public:
 	size_t NumVFBs() const { return vfbs_.size(); }
 
 	u32 PrevDisplayFramebufAddr() {
-		return prevDisplayFramebuf_ ? (0x04000000 | prevDisplayFramebuf_->fb_address) : 0;
+		return prevDisplayFramebuf_ ? prevDisplayFramebuf_->fb_address : 0;
 	}
 	u32 DisplayFramebufAddr() {
-		return displayFramebuf_ ? (0x04000000 | displayFramebuf_->fb_address) : 0;
+		return displayFramebuf_ ? displayFramebuf_->fb_address : 0;
 	}
 
 	u32 DisplayFramebufStride() {
